@@ -1,0 +1,29 @@
+// import partial files
+@import "variables";
+@import "components";
+
+
+html {
+    box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+body {
+    background-color: var(--background-color);
+    color: var(--text-color);
+}
+
+nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+// RESPONSIVE
+@import "tablet";
+@import "laptop";
