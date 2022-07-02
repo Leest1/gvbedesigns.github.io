@@ -513,11 +513,13 @@ nav ul .cta small {
   position: relative;
   display: inline-block;
 }
+
 .about .spotify img {
   width: 25rem;
   border-radius: 2rem;
   box-shadow: none;
 }
+
 .about .spotify a {
   font-family: "Overpass";
   font-weight: bold;
