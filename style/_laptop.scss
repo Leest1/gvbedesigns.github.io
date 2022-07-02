@@ -1,0 +1,66 @@
+@media screen and (min-width: 992px) {
+    // PRIMARY NAV
+    header {
+        flex-direction: row;
+    }
+    .primary-navigation {
+        padding: 2rem 3.1rem;
+        
+        .menu-toggle {
+            display:none;
+        }
+
+        .primary-nav-list {
+            @include fontSizeScaler(2);
+            display: block !important;
+        }
+
+        nav {
+            position: relative;
+            top: auto;
+            left: auto;
+            height: auto;
+            width: auto;
+
+            ul {
+                flex-direction: row;
+                gap: 1.5rem;
+
+                li {
+                    width:auto;                    
+                }
+
+                a {
+                    line-height: 2rem;
+                    vertical-align: text-bottom;
+                }
+            }
+
+            .cta {
+                a {
+                    @include fontSizeScaler(1);
+                    padding: 0.5rem 1rem;
+                    border-radius: 0.8rem;
+                }
+
+                small {
+                    font-size: 1rem;
+                }
+            }
+        }       
+    }
+    
+    .intro-home {
+        padding: 10vw;
+        flex-direction: row;
+        gap: 10rem;
+    }
+
+    .arrow-right {
+        display: block;
+    }
+
+    .chevron-down {
+        display: none;
+    }
+}

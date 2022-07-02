@@ -1,4 +1,13 @@
 /* The switch - the box around the slider */
+.switch-container {
+  position: fixed;
+  top: 2.75rem;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  z-index: 2;
+}
+
 .switch {
     position: relative;
     display: inline-block;
@@ -6,57 +15,241 @@
     height: 34px;
   }
   
-  /* Hide default HTML checkbox */
-  .switch input {
-    opacity: 0;
-    width: 0;
-    height: 0;
+/* Hide default HTML checkbox */
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* The slider */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: $switch-gray;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: #fff;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+input:checked + .slider {
+  background-color: $switch-gray;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px $switch-gray;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
+// typing effect
+.typing-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.typing-container h1 {
+  padding: 0.5rem;
+  font-weight: bold;
+  letter-spacing: 0.1rem;
+  text-align: center;
+  overflow: hidden;
+}
+.typing-container h1 span.typed-text {
+  color: $accent-spotify;
+  font-weight: bold;
+}
+.typing-container h1 span.cursor {
+  display: inline-block;
+  background-color: #ccc;
+  margin-left: 0.1rem;
+  width: 3px;
+  animation: blink 1s infinite;
+}
+.typing-container h1 span.cursor.typing {
+  animation: none;
+}
+@keyframes blink {
+  0%  { background-color: #ccc; }
+  49% { background-color: #ccc; }
+  50% { background-color: transparent; }
+  99% { background-color: transparent; }
+  100%  { background-color: #ccc; }
+}
+
+// TIMELINE
+.timeline {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  position: relative;
+
+  list-style: none;
+
+  .timeline-item {
+    position: relative;
+    padding-top: .5rem;
+
+    display: flex;
+    flex-direction: row;
   }
+
+  .timeline-content {
+    margin-left: 2rem;
+
+    h2 {
+      @include fontSizeScaler(1);
+      font-family: 'Overpass';
+      margin: 0;
+    }
+  }
+
+  .accent {
+    color: $accent-spotify;
+  }
+
+  .timeline-line {
+    width: 1rem;
+    
+    &:before {
+      background: var(--text-color);
+      border-radius: 100%;
+      content: "";
+      display: block;
+      height: 10px;
+      width: 10px;
+      position: absolute;
+      top: 1rem;
+      left: 2.5rem;
+    }
+
+    &:after {
+      content: "";
+      width: 1px;
+      background: var(--text-color);
+      display: block;
+      position: absolute;
+      top: 0; bottom: 0;
+      left: 2.75rem;
+      height: 160%;
+    }
+  }
+
+  .start {
+    .timeline-line {
+      &:before {
+        background: var(--text-color);
+        border-radius: 100%;
+        content: "";
+        display: block;
+        height: 7px;
+        width: 7px;
+        position: absolute;
+        top: 0rem;
+        left: 2.6rem;
+      }
   
-  /* The slider */
-  .slider {
-    position: absolute;
-    cursor: pointer;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: $switch-gray;
-    -webkit-transition: .4s;
-    transition: .4s;
+      &:after {
+        content: "";
+        width: 1px;
+        background: var(--text-color);
+        display: block;
+        position: absolute;
+        top: 0; bottom: 0;
+        left: 2.75rem;
+        height: 500%;
+      }
+    }
   }
-  
-  .slider:before {
-    position: absolute;
-    content: "";
-    height: 26px;
-    width: 26px;
-    left: 4px;
-    bottom: 4px;
-    background-color: #fff;
-    -webkit-transition: .4s;
-    transition: .4s;
+
+  .end {
+    .timeline-line {
+      &:before {
+        background: var(--text-color);
+        border-radius: 100%;
+        content: "";
+        display: block;
+        height: 7px;
+        width: 7px;
+        position: absolute;
+        top: 0rem;
+        left: 2.6rem;
+      }
+
+      &:after {
+        display: none;
+      }
+    }
   }
-  
-  input:checked + .slider {
-    background-color: $switch-gray;
+}
+
+// EXTRAS
+.brand-icons {
+  a {
+      padding: 0.3rem;
   }
-  
-  input:focus + .slider {
-    box-shadow: 0 0 1px $switch-gray;
+}
+
+.spotify-cta {
+  background-color: $accent-spotify;
+  color: $primary-white;
+}
+
+small {
+  font-size: 12px;
+}
+
+// ICONS
+.arrow-right {
+  display: none;
+  position: absolute;
+  right: 5rem;
+  bottom: 5rem;
+}
+
+.arrow-left {
+  display: none;
+}
+
+.chevron-down {
+  margin: 2rem 0rem;
+}
+
+.logo {
+  object {
+    width: 50%;
   }
-  
-  input:checked + .slider:before {
-    -webkit-transform: translateX(26px);
-    -ms-transform: translateX(26px);
-    transform: translateX(26px);
-  }
-  
-  /* Rounded sliders */
-  .slider.round {
-    border-radius: 34px;
-  }
-  
-  .slider.round:before {
-    border-radius: 50%;
-  }
+}
+
+// ICON SVGS
+object {
+  pointer-events: none;
+}

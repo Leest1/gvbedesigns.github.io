@@ -1,40 +1,126 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>GVBE Designs</title>
-    <link href="style/main.css" rel="stylesheet" />
-    <script src="jquery-3.6.0.dev.js"></script>
-    <script src="jquery.js"></script>
-  </head>
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>GVBE Designs</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Assistant:wght@200;300;400;500;600;700&family=Overpass:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap"
+    rel="stylesheet"
+  />
+  <link
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    rel="stylesheet"
+  />
+  <link href="style/main.css" rel="stylesheet" />
+  <script src="jquery-3.6.0.dev.js"></script>
+  <script src="jquery.js"></script>
+</head>
 
   <body>
+    <!-- DARK MODE SWITCH -->
+    <div class="switch-container">
+      <label class="switch">
+        <input type="checkbox" id="darkMode" />
+        <span class="slider round"></span>
+      </label>
+    </div>
     <!-- primary navigation -->
-    <header>
-      <nav>
-        <a>GVBE</a>
-        <div>
-          <label class="switch">
-            <input type="checkbox" id="darkMode">
-            <span class="slider round"></span>
-          </label>
-        </div>
-        <div>
-          <a>ABOUT</a>
-          <a>WORK</a>
-        </div>
+    <header class="primary-navigation">
+      <div class="row justify-space-between align-items-center">
+        <a href="./index.html" class="logo">
+          <object
+              data="assets/icons/logo.svg"
+              type="image/svg+xml"
+              id="logo"
+            ></object>
+        </a>
+        <a
+          href="#menu"
+          class="align-self-center menu-toggle"
+          id="menu-toggle"
+          aria-label="Open the menu"
+        >
+          <span aria-hidden="true" class="fa-solid fa-bars fa-2x"> </span>
+        </a>
+      </div>
+      <nav id="primary-nav-list" class="primary-nav-list">
+        <ul>
+          <li>
+            <a href="./about.html"
+              >ABOUT
+              <object
+                onload="changeColorPath('about-arrow')"
+                data="assets/icons/primary-nav-arrow.svg"
+                type="image/svg+xml"
+                id="about-arrow"
+              ></object>
+            </a>
+          </li>
+          <li>
+            <a href=""
+              >WORK
+              <object
+                onload="changeColorPath('work-arrow')"
+                data="assets/icons/primary-nav-arrow.svg"
+                type="image/svg+xml"
+                id="work-arrow"
+              ></object>
+            </a>
+          </li>
+          <li class="cta">
+            <a
+              href="https://linktr.ee/gvbecc"
+              target="_blank"
+              rel="noopener noreferrer"
+              ><small>CONTACT</small>
+            </a>
+          </li>
         </ul>
       </nav>
     </header>
 
     <!-- main content -->
     <article>
+      <div class="intro-home">
+        <img src="assets/images/intro-home-hero-square.png" />
+        <div>
+          <div class="typing-container">
+            <h1>
+              What's up? I'm Gabe and I am <span class="typed-text"></span
+              ><span class="cursor">&nbsp;</span> UX/UI Designer.
+            </h1>
+          </div>
+          <p>
+            I am passionate about improving lives of people and exploring ways I
+            can empower them through simple experiences.
+          </p>
+        </div>
+        <a href="home.html" class="arrow-right"
+          ><small>HIRE ME PLS&emsp;</small>
+          <!-- <span aria-hidden="true" class="fa-solid fa-long-arrow-right fa-2x"></span> -->
+          <object
+            onload="changeColorPath('arrow-right-icon')"
+            data="assets/icons/arrow-right.svg"
+            type="image/svg+xml"
+            id="arrow-right-icon"
+          ></object>
+        </a>
+        <a href="home.html" class="chevron-down">
+          <!-- <span aria-hidden="true" class="fa-solid fa-long-arrow-right fa-2x"></span> -->
+          <object
+            onload="changeColorLine('chevron-down')"
+            data="assets/icons/chevron-down.svg"
+            type="image/svg+xml"
+            id="chevron-down"
+          ></object>
+        </a>
+      </div>
     </article>
-
     <!-- footer -->
-    <footer>
-    </footer>
+    <footer></footer>
   </body>
 </html>

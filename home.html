@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>GVBE Designs</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Assistant:wght@200;300;400;500;600;700&family=Overpass:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+      rel="stylesheet"
+    />
+    <link href="style/main.css" rel="stylesheet" />
+    <script src="jquery-3.6.0.dev.js"></script>
+    <script src="jquery.js"></script>
+  </head>
+
+  <body>
+    <!-- DARK MODE SWITCH -->
+    <div class="switch-container">
+      <label class="switch">
+        <input type="checkbox" id="darkMode" />
+        <span class="slider round"></span>
+      </label>
+    </div>
+    <!-- primary navigation -->
+    <header class="primary-navigation">
+      <div class="row justify-space-between align-items-center">
+        <a href="./index.html" class="logo">
+          <object
+              data="assets/icons/logo.svg"
+              type="image/svg+xml"
+              id="logo"
+            ></object>
+        </a>
+        <a
+          href="#menu"
+          class="align-self-center menu-toggle"
+          id="menu-toggle"
+          aria-label="Open the menu"
+        >
+          <span aria-hidden="true" class="fa-solid fa-bars fa-2x"> </span>
+        </a>
+      </div>
+      <nav id="primary-nav-list" class="primary-nav-list">
+        <ul>
+          <li>
+            <a href="./about.html"
+              >ABOUT
+              <object
+                onload="changeColorPath('about-arrow')"
+                data="assets/icons/primary-nav-arrow.svg"
+                type="image/svg+xml"
+                id="about-arrow"
+              ></object>
+            </a>
+          </li>
+          <li>
+            <a href=""
+              >WORK
+              <object
+                onload="changeColorPath('work-arrow')"
+                data="assets/icons/primary-nav-arrow.svg"
+                type="image/svg+xml"
+                id="work-arrow"
+              ></object>
+            </a>
+          </li>
+          <li class="cta">
+            <a
+              href="https://linktr.ee/gvbecc"
+              target="_blank"
+              rel="noopener noreferrer"
+              ><small>CONTACT</small>
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- main content -->
+    <article>
+      <div class="home">
+        <section class="home-info">
+          <div class="profile-resume">
+            <img src="assets/images/main-home-profile.png" />
+            <a
+              href="/assets/lopez-gabriel-themed-resume.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="spotify-cta"
+              >RESUME</a
+            >
+          </div>
+          <h1>Gabriel Allen Paul Lopez</h1>
+          <h2>Design, Strategy, and all things Creative.</h2>
+          <p>
+            UX/UI Designer with a background in digital marketing strategy and
+            professional image curation. Certificate in UX/UI from the
+            University of California, Irvine mastering skills in user
+            experience, interface design, design thinking, visual design, and
+            font-end development.
+          </p>
+          <div class="brand-icons">
+            <a
+              href="https://www.instagram.com/gvbephoto/"
+              target="_blank"
+              rel="noopener noreferrer"
+              ><span
+                aria-hidden="true"
+                class="fa-brands fa-instagram-square fa-3x"
+              ></span
+            ></a>
+            <a
+              href="https://dribbble.com/gvbedesigns"
+              target="_blank"
+              rel="noopener noreferrer"
+              ><span
+                aria-hidden="true"
+                class="fa-brands fa-dribbble fa-3x"
+              ></span
+            ></a>
+            <a
+              href="https://www.linkedin.com/in/gabrielallenpaullopez/"
+              target="_blank"
+              rel="noopener noreferrer"
+              ><span
+                aria-hidden="true"
+                class="fa-brands fa-linkedin fa-3x"
+              ></span
+            ></a>
+          </div>
+        </section>
+        <section class="home-case-studies">
+          <a href=""><img src="assets/images/main-home-MDES.jpg" /></a>
+          <a href=""><img src="assets/images/main-home-HaloEd.jpg" /></a>
+        </section>
+      </div>
+      <a href="index.html" class="arrow-left">
+        <object
+          onload="changeColorPath('arrow-left-icon')"
+          data="assets/icons/arrow-left.svg"
+          type="image/svg+xml"
+          id="arrow-left-icon"
+        ></object>
+      </a>
+    </article>
+
+    <!-- footer -->
+    <footer></footer>
+  </body>
+</html>
