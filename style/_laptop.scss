@@ -54,6 +54,15 @@
         padding: 10vw;
         flex-direction: row;
         gap: 10rem;
+        p {
+            text-align: start;
+        }
+        h1 {
+            text-align: start;
+        }
+        .typing-container {
+            justify-content: flex-start;
+        }
     }
 
     .arrow-right {
