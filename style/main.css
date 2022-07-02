@@ -434,7 +434,7 @@ nav ul .cta small {
   margin-top: 5vh;
   display: flex;
   flex-direction: column;
-  gap: 10rem;
+  gap: 4rem;
 }
 .home .home-info {
   text-align: center;
