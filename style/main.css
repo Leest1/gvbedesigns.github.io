@@ -697,6 +697,15 @@ nav ul .cta small {
     flex-direction: row;
     gap: 10rem;
   }
+  .intro-home p {
+    text-align: start;
+  }
+  .intro-home h1 {
+    text-align: start;
+  }
+  .intro-home .typing-container {
+    justify-content: flex-start;
+  }
 
   .arrow-right {
     display: block;
