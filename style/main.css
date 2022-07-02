@@ -117,9 +117,9 @@ input:checked + .slider:before {
 }
 
 .typing-container h1 {
-  padding: 0.5rem;
+  /* padding: 0.5rem; */
   font-weight: bold;
-  letter-spacing: 0.1rem;
+  /* letter-spacing: 0.1rem; */
   text-align: center;
   overflow: hidden;
 }
@@ -413,20 +413,20 @@ nav ul .cta small {
   align-items: center;
 }
 .intro-home img {
-  width: 20rem;
-  height: 20rem;
+  width: 15rem;
+  height: 15rem;
   -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
   border-radius: 50%;
   box-shadow: 8px 12px 8px rgba(0, 0, 0, 0.25);
 }
 .intro-home h1 {
-  font-size: 2.44140625rem;
+  font-size: 2.5rem;
   padding: 0;
   font-weight: 400;
 }
 .intro-home p {
-  font-size: 1.5625rem;
+  font-size: 1.5rem;
   text-align: center;
 }
 
@@ -443,7 +443,7 @@ nav ul .cta small {
   width: 20rem;
   height: 20rem;
   -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
   border-radius: 50%;
   box-shadow: 8px 12px 8px rgba(0, 0, 0, 0.25);
 }
@@ -696,13 +696,23 @@ nav ul .cta small {
     padding: 10vw;
     flex-direction: row;
     gap: 10rem;
+    
   }
+
   .intro-home p {
     text-align: start;
+    font-size: 2rem;
   }
   .intro-home h1 {
     text-align: start;
+    font-size: 3rem;
   }
+
+  .intro-home img {
+    width: 20rem;
+    height: 20rem;
+  }
+
   .intro-home .typing-container {
     justify-content: flex-start;
   }
