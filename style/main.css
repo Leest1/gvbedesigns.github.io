@@ -279,7 +279,7 @@ input:checked + .slider:before {
 }
 
 small {
-  font-size: 12px;
+  font-size: 8px;
 }
 
 .arrow-right {
@@ -540,20 +540,20 @@ nav ul .cta small {
   text-align: center;
 }
 
-.about-me h2 {
-  display: none;
-}
 .about-me .small {
   display: block;
 }
+
 .about-me .content {
   text-align: center;
 }
+
 .about-me p {
   font-size: 1.25rem;
   padding: 0.75rem 0rem;
   margin: 0;
 }
+
 .about-me .quote {
   display: flex;
   flex-direction: row;
@@ -561,6 +561,7 @@ nav ul .cta small {
   gap: 1rem;
   padding: 1.5rem 0rem;
 }
+
 .about-me .quote p {
   font-size: 1.5625rem;
 }
