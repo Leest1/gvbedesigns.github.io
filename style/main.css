@@ -143,6 +143,11 @@ input:checked + .slider:before {
           animation: none;
 }
 
+.intro-text {
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+
 @-webkit-keyframes blink {
   0% {
     background-color: #ccc;
@@ -534,6 +539,7 @@ nav ul .cta small {
   padding: 0 2rem;
   text-align: center;
 }
+
 .about-me h2 {
   display: none;
 }
@@ -599,14 +605,14 @@ nav ul .cta small {
   }
   .about img {
     width: 30rem;
-    height: 52rem;
+    height: 47rem;
     -o-object-fit: cover;
-       object-fit: cover;
+    object-fit: cover;
     flex: none;
   }
   .about .about-me {
     flex: none;
-    width: 36.75rem;
+    width: 45rem;
     text-align: start;
   }
   .about .about-me .content {
@@ -630,6 +636,7 @@ nav ul .cta small {
   }
   .about .spotify img {
     width: 32.62rem;
+    height: 47rem;
   }
   .about .spotify a {
     padding: 1.5rem 2rem;
@@ -699,7 +706,6 @@ nav ul .cta small {
     padding: 10vw;
     flex-direction: row;
     gap: 5rem;
-    
   }
 
   .intro-home p {
@@ -718,6 +724,11 @@ nav ul .cta small {
 
   .intro-home .typing-container {
     justify-content: flex-start;
+  }
+  
+  .intro-text {
+    padding-left: none;
+    padding-right: none;
   }
 
   .arrow-right {
